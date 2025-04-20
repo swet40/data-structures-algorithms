@@ -20,4 +20,3 @@ public class max_length_chain {
     System.out.println("max length of chain = "+ chainLen);
     }
 }
-
