@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 
 public class job_sequencing{
 
@@ -21,8 +19,8 @@ public class job_sequencing{
 
         ArrayList<Job> jobs = new ArrayList<>();
 
-        for(int i=0; i<jobs.size(); i++){
-            jobs.add(new Job(i, jobs[i][0], jobs[i][1]));
+        for(int i=0; i<jobsInfo.length; i++){
+            jobs.add(new Job(i, jobsInfo[i][0], jobsInfo[i][1]));
         }
         Collections.sort(jobs, (obj1, obj2) -> obj2.profit-obj1.profit); //ascending order of profit
 
