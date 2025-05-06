@@ -16,7 +16,7 @@ public class balanced {
     }
 
     public static int createBST{
-        
+        int mid = st+end/2;
     }
 
 }
