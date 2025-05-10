@@ -30,6 +30,15 @@ public class balanced {
         getInorder(root.right, inorder);
     }
 
+    public static void preorder(Node root, ArrayList<Integer> preOrder){
+        if(root == null) return;
+
+        preOrder.get(root.data);
+        preorder(root.left, preOrder);
+        preorder(root.right, preOrder);
+
+    }
+
     public static Node create_bst(ArrayList<Integer> inorder, int st, int end){
         if(st>end){
             return null;
