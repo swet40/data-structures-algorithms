@@ -1,5 +1,7 @@
 import java.util.*;
 
+//T.C = O(n)
+
 public class find_itinerary {
 
     public static String getStarted(HashMap<String, String> tickets){
