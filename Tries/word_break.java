@@ -1,16 +1,17 @@
-public class basic{
+// Microsoft, Google
+
+public class word_break{
+
     static class Node{
         Node children[] = new Node[26];
         boolean eow = false;
 
         Node() {
-            for(int i = 0; i<26; i++){
-                children[i] = null;
-            }
+        for(int i = 0; i<26; i++){
+            children[i] = null;
         }
     }
-
-    public static Node root = new Node(); //by default - root is always empty
+}
 
     public static void insert(String word){   //O(L)
         Node curr = root;
@@ -24,7 +25,6 @@ public class basic{
         curr.eow = true;
     }
 
-    // T.C = O(n)
 
     public static boolean search(String key){
         Node curr = root;
@@ -38,14 +38,25 @@ public class basic{
         return curr.eow == true;
     }
 
-    
+    public static boolean wordBreak(String key){
+        if(key.length() == 0) return true;
+
+        for(int i = 1; i<=key.length(); i++){
+            if(search(key.substring(0,i)) && wordBreak(key.substring(i))){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static Node root = new Node();
     public static void main(String[] args) {
-        String words[] = {"the", "a", "there", "their", "any", "thee"};
-        for(int i = 0; i<words.length; i++){
-            insert(words[i]);
+        String arr[] = {"i", "like", "sam", "samsung", "mobile", "ice"};
+        for(int i = 0; i<arr.length; i++){
+            insert(arr[i]);
         }
 
-        System.out.println(search("any"));
-        System.out.println(search("an"));
+        String key = "ilikesamy";
+        System.out.println(wordBreak(key));
     }
 }
