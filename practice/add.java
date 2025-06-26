@@ -9,6 +9,7 @@ public class add {
         System.out.println("A  = " + a);
         System.out.println("B  = " + b);
     }
+
     public static void main(String[] args) {
         int a = 5;
         int b = 10;

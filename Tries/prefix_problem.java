@@ -50,14 +50,33 @@ public class prefix_problem{
         }
     }
 
+    public static boolean startPrefix(String prefix){
+        Node curr = root;
+
+        for(int i = 0; i<prefix.length(); i++){
+            int idx = prefix.charAt(i) - 'a';
+            if(curr.children[idx] == null){
+                return false;
+            }
+            curr = curr.children[idx];
+        }
+
+        return true;
+    }
+
     public static void main(String[] args) {
-        String arr[] = {"zebra", "dog", "duck", "dove"};
+        String arr[] = {"apple", "app", "man", "mango", "woman"};
+        String prefix1 = "app";
+        String prefix2 = "moon";
 
         for(int i = 0; i<arr.length; i++){
             insert(arr[i]);
         }
 
-        root.freq = -1;
-        findPrefix(root, "");
+        // root.freq = -1;
+        // findPrefix(root, "");
+
+        System.out.println(startPrefix(prefix1));
+        System.out.println(startPrefix(prefix2));
     }
 }
