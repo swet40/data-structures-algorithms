@@ -12,8 +12,8 @@ public class basic{
         this.dest = d;
         this.wt = w;
     }
+}
 
-    }
     public static void main(String[] args) {
 
         int v = 5;

@@ -53,6 +53,7 @@ public class bfs {
             if(!vis[curr]){
                 System.out.print(curr + " ");
                 vis[curr] = true;
+
                 for(int i = 0; i<graph[curr].size(); i++){
                     Edge e = graph[curr].get(i);
                     q.add(e.dest);
@@ -61,10 +62,15 @@ public class bfs {
         }
     }
 
-    public static void dfs(ArrayList<Edge>[] graph, int curr, boolean vis){
+    public static void dfs(ArrayList<Edge>[] graph, int curr, boolean vis[]){
         System.out.println(curr + " ");
         vis[curr] = true;
-        for(int i = 0; i<graph.)
+        for(int i = 0; i<graph[curr].size(); i++){
+            Edge e = graph[curr].get(i);
+            if(!vis[curr]){
+                dfs(graph, e.dest, vis);
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -80,6 +86,7 @@ public class bfs {
         ArrayList<Edge> graph[] = new ArrayList[V];
         createGraph(graph);
 
-        breadthfs(graph);
+        // breadthfs(graph);
+        dfs(graph, 0, new boolean[V]);
     }
 }
