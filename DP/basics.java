@@ -3,8 +3,6 @@ public class basics{
         if(n == 0 || n==1){
             return n;
         }
-        
-    
     if(f[n] != 0){
         return f[n];
     }
