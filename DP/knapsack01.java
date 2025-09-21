@@ -57,7 +57,7 @@ public class knapsack01 {
                 }
             }
         }
-        print(dp);
+        print(dp); //prints the dp tabulation
         return dp[n][W];
     }
     public static void main(String[] args) {
