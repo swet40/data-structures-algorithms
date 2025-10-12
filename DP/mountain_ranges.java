@@ -8,7 +8,9 @@ public class mountain_ranges {
                 int inside = dp[j];
                 int outside = dp[i-j-1];
                 dp[i] += inside*outside;
+                System.out.print(dp[i]+" ");
             }
+            System.out.println();
         }
         return dp[n];
     }
