@@ -1,5 +1,6 @@
 import java.util.*;
 
+// O(2^n)
 public class balanced_parenthesis{
     public static void helper(String curr, int o, int c,int n, List<String> res){
         if(o == n && c == n){
