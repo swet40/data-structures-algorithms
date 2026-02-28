@@ -31,6 +31,9 @@ public class josephus_prob{
     }
     
     public static int[] last2(int n, int k){
+        // T.c = O(n)
+        // S.C = O(1)
+        
         int first = 0;
         int second = 1;
         for(int i = 3; i<=n; i++){
