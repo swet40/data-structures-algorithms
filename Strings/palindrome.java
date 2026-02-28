@@ -10,7 +10,7 @@ public class palindrome {
     }
 
     public static void main(String[] args) {
-        String str= "papc";
+        String str= "A man, a plan, a canal: Panama";
         System.out.print(isPalindrome(str));;
     }
 }

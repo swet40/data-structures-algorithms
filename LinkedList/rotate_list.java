@@ -35,7 +35,7 @@ public class rotate_list {
 
         // iterate to kth value
         curr = head;
-        for(int i = 1; i<k; i++){
+        for(int i = 1; i<k; i++){   // for rotation to left by k places -> if we want to rotate right by k places just iterate till len-k times -> for(int i = 1; i<len-k ; i++){...}
             curr = curr.next;
         }
 
