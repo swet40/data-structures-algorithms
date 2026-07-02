@@ -1,5 +1,7 @@
 import java.util.Arrays;
 
+// Corrupt Pair
+
 public class missing_repeating{
     public static int[] find(int[] nums){
         int n = nums.length;

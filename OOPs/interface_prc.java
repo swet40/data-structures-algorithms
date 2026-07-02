@@ -28,6 +28,11 @@ class Horse implements chessPlayer{
     public void moves(){
         System.out.println("forward 1/2 step");
     }
+
+    public void walk() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'walk'");
+    }
 }
 
 class student{
